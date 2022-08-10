@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AboutPageRoutingModule } from './about-routing.module';
+import { ContractorFormPageRoutingModule } from './contractor-form-routing.module';
 
-import { AboutPage } from './about.page';
+import { ContractorFormPage } from './contractor-form.page';
 import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { ComponentsModule } from '../components/components.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    AboutPageRoutingModule,
+    ContractorFormPageRoutingModule,
     ComponentsModule
   ],
-  declarations: [AboutPage]
+  declarations: [ContractorFormPage]
 })
-export class AboutPageModule {}
+export class ContractorFormPageModule {}

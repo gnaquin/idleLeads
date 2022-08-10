@@ -12,9 +12,17 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: 'about',
-    loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
-  }
+    path: 'contractor-form',
+    loadChildren: () => import('./contractor-form/contractor-form.module').then( m => m.ContractorFormPageModule)
+  },
+  {
+    path: 'customer-form',
+    loadChildren: () => import('./customer-form/customer-form.module').then( m => m.CustomerFormPageModule)
+  },
+  {
+    path: 'contact-form',
+    loadChildren: () => import('./contact-form/contact-form.module').then( m => m.ContactFormPageModule)
+  },
 ];
 
 @NgModule({

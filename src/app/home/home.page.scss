@@ -1,39 +1,37 @@
-ion-menu-button {
-  color: var(--ion-color-primary);
+.headingWrapper {
+  height: 40vh;
+  background-image: url(../../assets/contractor.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 0;
+  padding-top: 0;
+  isolation: isolate;
 }
 
-#container {
-  text-align: center;
+.headingTextWrapper {  
+  width: 50%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headingTextWrapper::after {
+  content: '';
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  inset: 0; 
+  background-color: #0A4158;
+  z-index: -1;
+  mix-blend-mode: multiply;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-  color: #8c8c8c;
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
-//end default code
-
-.headingWrapper img {
-  
-}
-
-.headingTextWrapper {
-  position: relative
+.headerText {
+  margin-top: 0;
+  font-size: 2em;
+  color: white;
+  margin: .5em
 }
 
 .fullPg {
@@ -43,7 +41,7 @@ ion-menu-button {
   padding: .5em;
 }
 
-.why, .how {
+.why, .how, .who {
   width: 100%;
   height: auto;
   margin: 1em;
