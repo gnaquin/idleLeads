@@ -3,18 +3,55 @@
 </ion-header>
 
 <ion-content>
+  <div class="container">
+    <ion-card color="secondary">
+      <form>
+        <ion-list>
+          <ion-item color="secondary">
+            <ion-label position="stacked">Full Name</ion-label>
+            <ion-input autocapitalize="words" placeholder="full name"></ion-input>
+          </ion-item>
 
-  <form>
-    <ion-list>
-      <ion-item> 
-        <ion-label>Full Name</ion-label>
-        <ion-input></ion-input>
-      </ion-item>
-    </ion-list>
-  </form>
+          <ion-item color="secondary">
+            <ion-label position="stacked">Phone Number</ion-label>
+            <ion-input placeholder="phone number" type="tel"></ion-input>
+          </ion-item>
 
+          <ion-item color="secondary">
+            <ion-label position="stacked">Email</ion-label>
+            <ion-input placeholder="email"></ion-input>
+          </ion-item>
 
+          <ion-item color="secondary">
+            <ion-label position="stacked">Prefered Contact Method</ion-label>
+            <ion-select interface="popover" placeholder="choose one">
+              <ion-select-option value="call">Phone Call</ion-select-option>
+              <ion-select-option value="text">Text Message</ion-select-option>
+              <ion-select-option value="email">Email</ion-select-option>
+            </ion-select>
+          </ion-item>
 
+          <ion-item color="secondary">
+            <ion-label position="stacked">Type of Contractor</ion-label>
+            <ion-select interface="popover" placeholder="choose one">
+              <ion-select-option value="plumber">Plumber</ion-select-option>
+              <ion-select-option value="arborist">Arborist</ion-select-option>
+              <ion-select-option value="electrictian">Electrictian</ion-select-option>
+              <ion-select-option value="general">General Contractor</ion-select-option>
+              <ion-select-option value="other">Other (Specify Below)</ion-select-option>
+            </ion-select>
+          </ion-item>
 
+          <ion-item color="secondary">
+            <ion-label position="stacked">Briefly Describe the Job</ion-label>
+            <ion-input autocapitalize="sentences" placeholder="job description"><textbox></textbox></ion-input>
+          </ion-item>
+        </ion-list>
 
+        <ion-button color="tertiary" type="submit" expand="block"
+          >submit</ion-button
+        >
+      </form>
+    </ion-card>
+  </div>
 </ion-content>
