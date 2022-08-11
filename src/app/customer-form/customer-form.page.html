@@ -10,31 +10,43 @@
     <ion-card color="primary">
       <ion-card-header>
         <ion-card-subtitle>LET US DO THE WORK FOR YOU</ion-card-subtitle>
-        <ion-card-title>Ticket Form</ion-card-title> 
+        <ion-card-title>Ticket Form</ion-card-title>
       </ion-card-header>
 
-      <form>
+      <form [formGroup]="formData" (ngSubmit)="onSubmit()">
         <ion-list>
           <ion-item color="primary">
             <ion-label position="floating">Full Name</ion-label>
             <ion-input
+              required="true"
+              autofocus="true"
               autocapitalize="words"
+              formControlName="fullName"
             ></ion-input>
           </ion-item>
 
           <ion-item color="primary">
             <ion-label position="floating">Phone Number</ion-label>
-            <ion-input type="tel"></ion-input>
+            <ion-input
+              required="true"
+              pattern="tel"
+              formControlName="phone"
+              type="tel"
+            ></ion-input>
           </ion-item>
 
           <ion-item color="primary">
             <ion-label position="floating">Email</ion-label>
-            <ion-input></ion-input>
+            <ion-input
+              required="true"
+              pattern="email"
+              formControlName="email"
+            ></ion-input>
           </ion-item>
 
           <ion-item color="primary">
             <ion-label position="floating">Prefered Contact Method</ion-label>
-            <ion-select interface="popover">
+            <ion-select formControlName="prefContact" interface="popover">
               <ion-select-option value="call">Phone Call</ion-select-option>
               <ion-select-option value="text">Text Message</ion-select-option>
               <ion-select-option value="email">Email</ion-select-option>
@@ -43,7 +55,12 @@
 
           <ion-item color="primary">
             <ion-label position="floating">Briefly Describe the Job</ion-label>
-            <ion-textarea autocapitalize="sentences" #autofocus></ion-textarea>
+            <ion-textarea
+              autocorrect="on"
+              formControlName="description"
+              autocapitalize="sentences"
+              #autofocus
+            ></ion-textarea>
           </ion-item>
         </ion-list>
 

@@ -18,11 +18,12 @@
         <ion-card-title>Contractor Form</ion-card-title> 
       </ion-card-header>
 
-      <form>
+      <form [formGroup]="formData" (ngSubmit)="onSubmit()">
         <ion-list>
           <ion-item color="primary">
             <ion-label position="floating">Full Name</ion-label>
             <ion-input
+              formControlName="fullName"
               autocapitalize="words"
             ></ion-input>
           </ion-item>
@@ -30,6 +31,7 @@
           <ion-item color="primary">
             <ion-label position="floating">Company Name</ion-label>
             <ion-input
+              formControlName="companyName"
               autocapitalize="words"
             ></ion-input>
           </ion-item>
@@ -37,13 +39,14 @@
           <ion-item color="primary">
             <ion-label position="floating">Company Address</ion-label>
             <ion-input
+              formControlName="companyAddress"
               autocapitalize="words"
             ></ion-input>
           </ion-item>
 
           <ion-item color="primary">
             <ion-label position="floating">Phone Number</ion-label>
-            <ion-input type="tel"></ion-input>
+            <ion-input formControlName="phone" type="tel"></ion-input>
           </ion-item>
 
         </ion-list>
