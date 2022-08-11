@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -6,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent implements OnInit {
+  public folder: string;
 
-  constructor() { }
+  constructor(private activatedRoute: ActivatedRoute) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.folder = this.activatedRoute.snapshot.paramMap.get('id');
+  }
 
 }

@@ -1,3 +1,18 @@
-<p>
-  footer works!
-</p>
+<ion-footer translucent="true">
+  <ion-toolbar>
+    <div class="container"> 
+      <!-- <h3>Get in Touch</h3> -->
+
+      <div class="subcontainer">
+        <p class="text">(985) 224 - 9420</p>
+        <p class="text">gncd.tech@gmail.com</p>
+      </div>
+
+      <div class="subcontainer">
+        <ion-button color="tertiary" [routerLink]="['/customer-form']">
+          <p>submit a ticket</p>
+        </ion-button>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-footer>

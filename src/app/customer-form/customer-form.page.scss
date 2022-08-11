@@ -3,16 +3,29 @@
 }
 
 .container {
-    height: 80%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20em
 }
 
 ion-card {
-    width: 90%
+    width: 90%;
 }
 
 ion-button {
     margin: 1em
+}
+
+ion-list {
+    background: #0A4158
+}
+
+ion-item {
+    font-size: 1.5em;
+}
+
+ion-input, ion-select, ion-select-option, ion-textarea {
+    color: grey
 }
