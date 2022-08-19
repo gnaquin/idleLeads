@@ -8,7 +8,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class ContractorFormPage implements OnInit {
 
-  private formData: FormGroup;
+  formData: FormGroup;
 
   constructor() { }
 
@@ -19,7 +19,7 @@ export class ContractorFormPage implements OnInit {
       companyName: new FormControl(),
       companyAddress: new FormControl(),
       phone: new FormControl()
-    })
+    });
   }
 
   onSubmit() {

@@ -8,7 +8,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class CustomerFormPage implements OnInit {
 
-  private formData: FormGroup;
+  formData: FormGroup;
 
   constructor() { }
 
