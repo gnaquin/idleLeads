@@ -8,6 +8,7 @@ import { CustomerFormPageRoutingModule } from './customer-form-routing.module';
 
 import { CustomerFormPage } from './customer-form.page';
 import { ComponentsModule } from '../components/components.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { ComponentsModule } from '../components/components.module';
     IonicModule,
     CustomerFormPageRoutingModule,
     ComponentsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   declarations: [CustomerFormPage]
 })
