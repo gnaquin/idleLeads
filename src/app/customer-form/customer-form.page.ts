@@ -9,16 +9,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CustomerFormPage implements OnInit {
   customerData: any;
-  form: FormGroup;
-  constructor(public fb: FormBuilder, private http: HttpClient) {
-    this.form = this.fb.group({
-      fullName: [''],
-      phone: [''],
-      email: [''],
-      prefContact: [''],
-      jobDesc: [''],
-    });
-  }
+  fullName: string;
+  phone: string;
+  email: string;
+  prefContact: string;
+  jobDesc: string;
+
+  constructor(/* public fb: FormBuilder,*/ private http: HttpClient) {}
   ngOnInit() {
     this.customerData = new FormGroup({
       fullName: new FormControl(),
@@ -29,53 +26,11 @@ export class CustomerFormPage implements OnInit {
     });
   }
   onSubmit() {
-    const customerData: any = new FormData();
-    customerData.append('fullName', this.form.get('fullName').value);
-    customerData.append('phone', this.form.get('phone').value);
-    customerData.append('email', this.form.get('email').value);
-    customerData.append('prefContact', this.form.get('prefContact').value);
-    customerData.append('jobDesc', this.form.get('jobDesc').value);
-    console.log('this is the data available in the onSubmit function' + this.customerData.value);
-    this.http.post('http://localhost:3000/ticket', customerData).subscribe({
-      next: (response) => console.log(response),
-      error: (error) => console.log(error),
-    });
+    this.http
+      .post('http://localhost:3000/ticket', this.customerData.value)
+      .subscribe({
+        next: (response) => console.log(response),
+        error: (error) => console.log(error),
+      });
   }
 }
-
-// import { Component, Injectable, OnInit } from '@angular/core';
-// import { FormControl, FormGroup } from '@angular/forms';
-// import { ActivatedRoute } from '@angular/router';
-
-// @Component({
-//   selector: 'app-customer-form',
-//   templateUrl: './customer-form.page.html',
-//   styleUrls: ['./customer-form.page.scss'],
-// })
-// export class CustomerFormPage implements OnInit {
-
-//   customerData: any;
-
-//   private priority: string;
-
-//   constructor(private route: ActivatedRoute) { }
-
-//   ngOnInit() {
-
-//     this.priority = this.route.snapshot.paramMap.get('priority');
-
-//     this.customerData = new FormGroup({
-//       fullName: new FormControl(),
-//       phone: new FormControl(),
-//       email: new FormControl(),
-//       prefContact: new FormControl(),
-//       jobDesc: new FormControl()
-//     });
-
-//   }
-
-//   onSubmit() {
-//     console.log(this.customerData.value);
-//   }
-
-// }
