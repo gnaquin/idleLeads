@@ -27,7 +27,7 @@ export class CustomerFormPage implements OnInit {
   }
   onSubmit() {
     this.http
-      .post('http://localhost:3000/ticket', this.customerData.value)
+      .post('https://idle-back-beta1.web.app/ticket', this.customerData.value)
       .subscribe({
         next: (response) => console.log(response),
         error: (error) => console.log(error),
