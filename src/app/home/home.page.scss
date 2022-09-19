@@ -1,3 +1,17 @@
+@media only screen and (min-width: 992px) {
+  ion-header  {
+    display: none;
+  }
+
+  app-desktop-header {
+    display:block
+  }
+}
+
+app-desktop-header {
+  display: none
+}
+
 .headingWrapper {
   height: 40vh;
   background-image: url(../../assets/contractor.jpg);

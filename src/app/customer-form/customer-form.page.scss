@@ -12,7 +12,44 @@
 
 ion-card {
     width: 90%;
-    max-height: 70vh
+    max-width: 40em;
+    height: 38em;
+}
+
+@media only screen and (max-height: 605px) {
+    ion-card {
+        margin-top: 5em;
+    }
+}
+
+@media only screen and (max-height: 555px) {
+    ion-card {
+        margin-top: 10em;
+    }
+}
+
+@media only screen and (max-height: 478px) {
+    ion-card {
+        margin-top: 15em;
+    }
+}
+
+@media only screen and (max-height: 405px) {
+    ion-card {
+        margin-top: 20em;
+    }
+}
+
+@media only screen and (max-height: 335px) {
+    ion-card {
+        margin-top: 25em;
+    }
+}
+
+@media only screen and (max-height: 265px) {
+    ion-card {
+        margin-top: 30em;
+    }
 }
 
 ion-card-title {
